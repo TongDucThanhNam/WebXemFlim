@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  movie-bun-app: # Name of the service
+    build:
+      context: . # Use an image built from the specified dockerfile
+    ports:
+      - "8080:3000"  # Map port 8080 on the host to port 3000 in the container
+    command: ["bun", "start"]
